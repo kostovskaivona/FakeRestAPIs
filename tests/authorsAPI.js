@@ -2,7 +2,7 @@ import request from 'supertest';
 import { expect } from 'chai';
 import assert from 'assert';
 
-const baseUrl = 'https://fakerestapi.azurewebsites.net';
+const baseUrl = process.env.BASE_URL || 'https://fakerestapi.azurewebsites.net';
 
 describe('Author API Tests', function () {
     it('should get all authors', async function () {

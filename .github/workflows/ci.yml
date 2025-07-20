@@ -1,0 +1,27 @@
+name: CI — API Test Suite
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build & run Docker container
+        run: |
+          docker build -t api-tests .
+          docker run --rm -v ${{ github.workspace }}/mochawesome-report:/usr/src/app/mochawesome-report api-tests
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: mochawesome-report
+          path: mochawesome-report/
