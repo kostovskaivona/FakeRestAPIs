@@ -1,0 +1,25 @@
+{
+  "name": "falerestapis",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha authorsAPI.js --reporter mochawesome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kostovskaivona/FakeRestAPIs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kostovskaivona/FakeRestAPIs/issues"
+  },
+  "homepage": "https://github.com/kostovskaivona/FakeRestAPIs#readme",
+  "devDependencies": {
+    "chai": "^5.2.1",
+    "mochawesome": "^7.1.3",
+    "supertest": "^7.1.3"
+  }
+}
