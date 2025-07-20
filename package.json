@@ -4,8 +4,10 @@
   "description": "",
   "type": "module",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha authorsAPI.js --reporter mochawesome"
+  "scripts": {    
+    "test": "mocha tests/*.js --reporter mochawesome",
+    "test:books": "mocha tests/booksAPI.js --reporter mochawesome",
+    "test:authors": "mocha tests/authorsAPI.js --reporter mochawesome"
   },
   "repository": {
     "type": "git",
