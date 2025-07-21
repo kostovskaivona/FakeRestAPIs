@@ -75,6 +75,14 @@ POST	/api/v1/Authors
 PUT	/api/v1/Authors/{id}	
 DELETE	/api/v1/Authors/{id}
 
+Note: because the endpoints 
+- does not have validations
+- does not return errors
+- does not insert or edit data in DB
+- data is constantly changing
+I wrote tests for what is returned after execution of every endpoint
+
+
 ## Running Tests with Docker and CI/CD Pipeline
 This project includes a Dockerfile and a GitHub Actions workflow for running tests in a containerized environment as part of a CI/CD pipeline.
 
