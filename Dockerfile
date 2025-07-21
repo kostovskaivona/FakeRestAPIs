@@ -9,4 +9,4 @@ COPY . .
 
 ENV BASE_URL=https://fakerestapi.azurewebsites.net
 
-CMD ["npx", "mocha", "tests/**/*.js", "--reporter", "mochawesome", "--reporter-options", "reportDir=mochawesome-report,reportFilename=report"]
+CMD ["npm", "test"]

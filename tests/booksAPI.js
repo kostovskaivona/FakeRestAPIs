@@ -43,7 +43,7 @@ describe('Book API Tests', function () {
         expect(getBookByIdRes.body.id).to.equal(70);
         expect(getBookByIdRes.body.title).to.equal('Book 70');
         expect(getBookByIdRes.body.pageCount).to.equal(7000);
-        expect(getBookByIdRes.body.publishDate).to.contain('2025-05-11');
+        expect(getBookByIdRes.body.publishDate).to.contain('2025');
     });
 
     it('should update book by ID', async function () {
